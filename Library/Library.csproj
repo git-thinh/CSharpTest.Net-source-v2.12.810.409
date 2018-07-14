@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7BD5EDD1-445C-46D1-A0B2-4B68CB51EADB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSharpTest.Net</RootNamespace>
+    <AssemblyName>CSharpTest.Net.Library</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OutputPath>..\bin\</OutputPath>
+    <IntermediateOutputPath>$(OutputPath)obj\$(AssemblyName)\</IntermediateOutputPath>
+    <DocumentationFile>$(OutputPath)$(AssemblyName).xml</DocumentationFile>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <DefineConstants>NET35;TRACE</DefineConstants>
+    <ErrorReport>none</ErrorReport>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\keys\csharptest.net.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web">
+      <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Shared\ArgumentList.cs">
+      <Link>Shared\ArgumentList.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Check.cs">
+      <Link>Shared\Check.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Configuration.cs">
+      <Link>Shared\Configuration.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\FileList.cs">
+      <Link>Shared\FileList.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\ProcessInfo.cs">
+      <Link>Shared\ProcessInfo.cs</Link>
+    </Compile>
+    <Compile Include="AppConfig\UserSettingsSection.Upgrade.cs" />
+    <Compile Include="AppConfig\UserSettingsSubSection.cs" />
+    <Compile Include="AppConfig\UserSettingsSubSectionCollection.cs" />
+    <Compile Include="Bases\Comparable.cs" />
+    <Compile Include="Bases\Disposable.cs" />
+    <Compile Include="Bases\Equatable.cs" />
+    <Compile Include="Collections\BTreeDictionary.cs" />
+    <Compile Include="Collections\BTreeList.cs" />
+    <Compile Include="Collections\IConcurrentDictionary.cs" />
+    <Compile Include="Collections\IDictionaryEx.cs" />
+    <Compile Include="Collections\KeyValueComparer.cs" />
+    <Compile Include="Collections\MergeSort.cs" />
+    <Compile Include="Collections\OrderedEnumeration.cs" />
+    <Compile Include="Collections\OrderedKeyValuePairs.cs" />
+    <Compile Include="Collections\SynchronizedDictionary.cs" />
+    <Compile Include="Collections\SynchronizedList.cs" />
+    <Compile Include="Crypto\SecureTransferMessage.cs" />
+    <Compile Include="Crypto\SecureTransferServer.cs" />
+    <Compile Include="Crypto\SecureTransferClient.cs" />
+    <Compile Include="Interfaces\IFactory.cs">
+    </Compile>
+    <Compile Include="Cloning\ClonableExtensions.cs" />
+    <Compile Include="Cloning\MemberwiseClone.cs" />
+    <Compile Include="Cloning\ObjectCloner.cs" />
+    <Compile Include="Cloning\ReferenceComparer.cs" />
+    <Compile Include="Cloning\SerializerClone.cs" />
+    <Compile Include="Collections\DisposingList.cs" />
+    <Compile Include="Collections\LListNode.cs" />
+    <Compile Include="Crypto\AsymmetricKey.cs" />
+    <Compile Include="Crypto\HashStream.cs" />
+    <Compile Include="Crypto\IPasswordDerivedBytes.cs" />
+    <Compile Include="Crypto\LocalHostKey.cs" />
+    <Compile Include="Crypto\ModifiedRijndael.cs" />
+    <Compile Include="Crypto\PBKDF2.cs" />
+    <Compile Include="Crypto\RSAPrivateKey.cs" />
+    <Compile Include="Crypto\RSAPublicKey.cs" />
+    <Compile Include="Crypto\RtlProcessKey.cs" />
+    <Compile Include="Crypto\SecureStringStream.cs" />
+    <Compile Include="Crypto\SecureStringUtils.cs" />
+    <Compile Include="Crypto\HashDerivedBytes.cs" />
+    <Compile Include="Crypto\UnicodeReader.cs" />
+    <Compile Include="Crypto\WhirlpoolManaged.cs" />
+    <Compile Include="Data\CsvReader.cs" />
+    <Compile Include="Delegates\TimeoutAction.cs" />
+    <Compile Include="Formatting\ByteEncoding.cs" />
+    <Compile Include="Formatting\Base64Stream.cs" />
+    <Compile Include="Formatting\Safe64Stream.cs" />
+    <Compile Include="Formatting\HexEncoding.cs" />
+    <Compile Include="Formatting\Safe64Encoding.cs" />
+    <Compile Include="Html\HtmlLightDocument.cs" />
+    <Compile Include="Html\XmlLightAttributes.cs" />
+    <Compile Include="Html\XmlLightDocument.cs" />
+    <Compile Include="Html\XmlLightElement.cs" />
+    <Compile Include="Html\XhtmlValidation.cs" />
+    <Compile Include="Html\XmlLightInterfaces.cs" />
+    <Compile Include="Html\XmlLightNavigator.cs" />
+    <Compile Include="Html\XmlLightParser.cs" />
+    <Compile Include="Interfaces\ICloneable.cs" />
+    <Compile Include="Collections\IReadonlyCollection.cs" />
+    <Compile Include="Collections\OrdinalList.cs" />
+    <Compile Include="Collections\ReadonlyList.cs" />
+    <Compile Include="Collections\SetList.cs" />
+    <Compile Include="Commands\Argument.cs" />
+    <Compile Include="Commands\Attributes.cs" />
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\CommandFilter.cs" />
+    <Compile Include="Commands\CommandInterpreter.cs" />
+    <Compile Include="Commands\DefaultCommands.cs" />
+    <Compile Include="Commands\Exceptions.cs" />
+    <Compile Include="Commands\HelpDisplay.cs" />
+    <Compile Include="Commands\DisplayInfoBase.cs" />
+    <Compile Include="Commands\Interfaces.cs" />
+    <Compile Include="Commands\Option.cs" />
+    <Compile Include="Crypto\AESCryptoKey.cs" />
+    <Compile Include="Crypto\AsciiEncoder.cs" />
+    <Compile Include="Crypto\Encryption.cs" />
+    <Compile Include="Crypto\CryptoKey.cs" />
+    <Compile Include="Crypto\Hash.cs" />
+    <Compile Include="Crypto\IEncryptDecrypt.cs" />
+    <Compile Include="Crypto\Password.cs" />
+    <Compile Include="Crypto\PasswordHash.cs" />
+    <Compile Include="Crypto\PasswordKey.cs" />
+    <Compile Include="Crypto\BinaryComparer.cs" />
+    <Compile Include="Crypto\Salt.cs" />
+    <Compile Include="Crypto\SaltedData.cs" />
+    <Compile Include="Delegates\Actions.cs" />
+    <Compile Include="Delegates\EventHandlerForControl.cs" />
+    <Compile Include="Delegates\Functions.cs" />
+    <Compile Include="Interfaces\ITransactable.cs" />
+    <Compile Include="Interfaces\DefaultFactories.cs" />
+    <Compile Include="IO\AggregateStream.cs" />
+    <Compile Include="IO\BackgroundWriter.cs" />
+    <Compile Include="IO\BaseStream.cs" />
+    <Compile Include="Formatting\HexStream.cs" />
+    <Compile Include="IO\ClampedStream.cs" />
+    <Compile Include="IO\TransactedCompoundFile.cs" />
+    <Compile Include="IO\Crc32.cs" />
+    <Compile Include="IO\FileStreamFactory.cs" />
+    <Compile Include="IO\FindFile.cs" />
+    <Compile Include="IO\FragmentedFile.cs" />
+    <Compile Include="IO\MarshallingStream.cs" />
+    <Compile Include="IO\SegmentedMemoryStream.cs" />
+    <Compile Include="IO\SharedMemoryStream.cs" />
+    <Compile Include="IO\StreamCache.cs" />
+    <Compile Include="IO\TempDirectory.cs" />
+    <Compile Include="IO\TransactFile.cs" />
+    <Compile Include="IO\DisposingStream.cs" />
+    <Compile Include="IO\IOStream.cs" />
+    <Compile Include="IO\CombinedStream.cs" />
+    <Compile Include="IO\NonClosingStream.cs" />
+    <Compile Include="IpcChannel\IIpcChannelRegistrar.cs" />
+    <Compile Include="IpcChannel\IpcChannelRegistrar.cs" />
+    <Compile Include="IpcChannel\IpcEvent.cs" />
+    <Compile Include="IpcChannel\IpcEventChannel.cs" />
+    <Compile Include="IpcChannel\IpcEventListener.cs" />
+    <Compile Include="IpcChannel\IpcEventMessage.cs" />
+    <Compile Include="IpcChannel\IpcEventSender.cs" />
+    <Compile Include="IpcChannel\IpcSignalEventArgs.cs" />
+    <Compile Include="Processes\AssemblyRunner.cs" />
+    <Compile Include="Processes\IRunner.cs" />
+    <Compile Include="Processes\ProcessExitedEventArgs.cs" />
+    <Compile Include="Processes\ProcessOutputEventArgs.cs" />
+    <Compile Include="Processes\ProcessRunner.cs" />
+    <Compile Include="Processes\ScriptEngine.cs" />
+    <Compile Include="Processes\ScriptRunner.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reflection\ObjectSerializer.cs" />
+    <Compile Include="Reflection\PropertySerializer.cs" />
+    <Compile Include="Reflection\PropertyType.cs" />
+    <Compile Include="Reflection\PropertyValue.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Serialization\INameValueStore.cs" />
+    <Compile Include="Serialization\ISerializer.cs" />
+    <Compile Include="Serialization\KeyValueSerializer.cs" />
+    <Compile Include="Serialization\LimitedSerializer.cs" />
+    <Compile Include="Serialization\PrimitiveSerializer.cs" />
+    <Compile Include="Serialization\Storage.cs" />
+    <Compile Include="Serialization\StorageClasses.cs" />
+    <Compile Include="AppConfig\UserSettingsSection.cs" />
+    <Compile Include="Serialization\VariantNumberSerializer.cs" />
+    <Compile Include="Shared\PublicShared.cs" />
+    <Compile Include="Synchronization\ReservedWriteLocking.cs" />
+    <Compile Include="Synchronization\DebugLocking.cs" />
+    <Compile Include="Synchronization\DebugLockFactory.cs" />
+    <Compile Include="Synchronization\ExclusiveLocking.cs" />
+    <Compile Include="Synchronization\IgnoreLocking.cs" />
+    <Compile Include="Synchronization\ILockStrategy.cs" />
+    <Compile Include="Synchronization\LockCounterFactory.cs" />
+    <Compile Include="Synchronization\LockFactory.cs" />
+    <Compile Include="Synchronization\ReadLock.cs" />
+    <Compile Include="Synchronization\ReaderWriterLocking.cs" />
+    <Compile Include="Synchronization\SafeLock.cs" />
+    <Compile Include="Synchronization\SimpleReadWriteLocking.cs" />
+    <Compile Include="Synchronization\WriterOnlyLocking.cs" />
+    <Compile Include="Synchronization\WriteLock.cs" />
+    <Compile Include="Threading\IWaitAndContinue.cs" />
+    <Compile Include="Threading\IWorkQueue.cs" />
+    <Compile Include="Synchronization\MutexLock.cs" />
+    <Compile Include="Threading\UsageCounter.cs" />
+    <Compile Include="Threading\WaitAndContinueList.cs" />
+    <Compile Include="Threading\WaitAndContinueWorker.cs" />
+    <Compile Include="Threading\WorkQueue.cs" />
+    <Compile Include="Utils\Constants.cs" />
+    <Compile Include="Utils\FileUtils.cs" />
+    <Compile Include="Utils\ObjectKeepAlive.cs" />
+    <Compile Include="Utils\RegexPatterns.cs" />
+    <Compile Include="IO\ReplaceFile.cs" />
+    <Compile Include="Utils\StringCoverter.cs" />
+    <Compile Include="Utils\StringUtils.cs" />
+    <Compile Include="IO\TempFile.cs" />
+    <Compile Include="Utils\WeakReference.cs" />
+    <Compile Include="WinForms\Win32Window.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LICENSE-2.0.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\keys\csharptest.net.snk">
+      <Link>Properties\csharptest.net.snk</Link>
+    </None>
+    <None Include="AppConfig\userSettings.xsd">
+    </None>
+    <EmbeddedResource Include="Html\Xhtml1_0\xhtml-lat1.ent" />
+    <EmbeddedResource Include="Html\Xhtml1_0\xhtml-special.ent" />
+    <EmbeddedResource Include="Html\Xhtml1_0\xhtml-symbol.ent" />
+    <EmbeddedResource Include="Html\Xhtml1_0\xhtml1-frameset.dtd" />
+    <EmbeddedResource Include="Html\Xhtml1_0\xhtml1-strict.dtd" />
+    <EmbeddedResource Include="Html\Xhtml1_0\xhtml1-transitional.dtd" />
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>CmdTool</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{097601FB-7E62-47DA-8E48-B56C9AD5DF20}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CSharpTest.Net.Library.Test</RootNamespace>
+    <AssemblyName>CSharpTest.Net.Library.Test</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OutputPath>..\..\bin\</OutputPath>
+    <IntermediateOutputPath>$(OutputPath)obj\$(AssemblyName)\</IntermediateOutputPath>
+    <DocumentationFile Condition="'$(OutputType)' == 'Library'">$(OutputPath)$(AssemblyName).xml</DocumentationFile>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <DefineConstants>NET35;TRACE</DefineConstants>
+    <ErrorReport>none</ErrorReport>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Library">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\CSharpTest.Net.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\BPlusTree\BPlusTree.Test\TestCollection.cs">
+      <Link>TestCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\BPlusTree\BPlusTree.Test\TestDictionary.cs">
+      <Link>TestDictionary.cs</Link>
+    </Compile>
+    <Compile Include="TestTransactedCompoundFile.cs" />
+    <Compile Include="TestBackgroundWriter.cs" />
+    <Compile Include="TestBTreeList.cs" />
+    <Compile Include="LockingTests\BaseLockTest.cs" />
+    <Compile Include="LockingTests\BaseThreadedReaderWriterTest.cs" />
+    <Compile Include="LockingTests\BaseThreadedWriterTest.cs" />
+    <Compile Include="LockingTests\TestDebugLocking.cs" />
+    <Compile Include="LockingTests\TestLockingStructs.cs" />
+    <Compile Include="LockingTests\TestMutexLock.cs" />
+    <Compile Include="LockingTests\TestReservedWriteLocking.cs" />
+    <Compile Include="LockingTests\TestSimpleReadWriteLocking.cs" />
+    <Compile Include="LockingTests\TestIgnoreLocking.cs" />
+    <Compile Include="LockingTests\TestReaderWriterLocking.cs" />
+    <Compile Include="LockingTests\TestExclusiveLocking.cs" />
+    <Compile Include="LockingTests\TestWriterOnlyLocking.cs" />
+    <Compile Include="LockingTests\ThreadedReaderWriter.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Resources\AssemblyRunnerSampleApp.cs" />
+    <Compile Include="TestBTreeDictionary.cs" />
+    <Compile Include="TestFactories.cs" />
+    <Compile Include="TestFindFile.cs" />
+    <Compile Include="TestOrderedEnumeration.cs" />
+    <Compile Include="TestSecureTransfer.cs" />
+    <Compile Include="TestAssemblyRunner.cs" />
+    <Compile Include="TestClampedStream.cs" />
+    <Compile Include="TestCrc32.cs" />
+    <Compile Include="TestDisposable.cs" />
+    <Compile Include="TestFragmentedFile.cs" />
+    <Compile Include="TestGenericCollection.cs" />
+    <Compile Include="TestHashDerivedBytes.cs" />
+    <Compile Include="TestCsvReader.cs" />
+    <Compile Include="TestHexEncoding.cs">
+    </Compile>
+    <Compile Include="TestHtmlParser.cs" />
+    <Compile Include="TestIpcChannel.cs" />
+    <Compile Include="TestLinkList.cs" />
+    <Compile Include="TestModifiedRijndael.cs" />
+    <Compile Include="TestObjectKeepAlive.cs" />
+    <Compile Include="TestPassword.cs" />
+    <Compile Include="TestPasswordHash.cs" />
+    <Compile Include="TestPrimitiveSerializer.cs" />
+    <Compile Include="TestSafe64Encoding.cs" />
+    <Compile Include="TestBinaryComparer.cs" />
+    <Compile Include="TestCloning.cs" />
+    <Compile Include="TestCmdInterpreter.cs" />
+    <Compile Include="TestDelegates.cs">
+    </Compile>
+    <Compile Include="TestDisposingList.cs" />
+    <Compile Include="TestEncryption.cs" />
+    <Compile Include="TestEquatable.cs" />
+    <Compile Include="TestFileUtils.cs" />
+    <Compile Include="TestHash.cs" />
+    <Compile Include="TestIOStreamUtils.cs" />
+    <Compile Include="TestOrdinalList.cs" />
+    <Compile Include="TestProcessRunner.cs" />
+    <Compile Include="TestPropertySerializer.cs" />
+    <Compile Include="TestPropertyType.cs" />
+    <Compile Include="TestPropertyValue.cs" />
+    <Compile Include="TestReadOnlyList.cs" />
+    <Compile Include="TestReplaceFile.cs" />
+    <Compile Include="TestRSACrypto.cs" />
+    <Compile Include="TestSalt.cs" />
+    <Compile Include="TestScriptRunner.cs" />
+    <Compile Include="TestSecureString.cs" />
+    <Compile Include="TestSegmentedStream.cs" />
+    <Compile Include="TestSerializers.cs" />
+    <Compile Include="TestSetList.cs" />
+    <Compile Include="TestStorage.cs" />
+    <Compile Include="TestStreamCache.cs" />
+    <Compile Include="TestStreams.cs" />
+    <Compile Include="TestStringConvert.cs" />
+    <Compile Include="TestStringUtils.cs" />
+    <Compile Include="TestSynchronizedCollections.cs" />
+    <Compile Include="TestTempFiles.cs" />
+    <Compile Include="TestTimeoutAction.cs" />
+    <Compile Include="TestUsageCounter.cs" />
+    <Compile Include="TestUserSettings.cs" />
+    <Compile Include="TestVariantSerializer.cs" />
+    <Compile Include="TestWaitAndContinue.cs" />
+    <Compile Include="TestWeakReferenceT.cs" />
+    <Compile Include="TestWhirlpoolHash.cs" />
+    <Compile Include="TestWin32Window.cs" />
+    <Compile Include="TestWorkQueue.cs" />
+    <Compile Include="TestXhtmlValid.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\roktesting.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\roktesting.cer" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <StartAction>Program</StartAction>
+    <StartProgram>$(ProjectDir)$(OutputPath)..\Tools\NUnit\nunit-console.exe</StartProgram>
+    <StartArguments>/nologo /noshadow /labels /wait $(AssemblyName).dll</StartArguments>
+    <StartWorkingDirectory>$(ProjectDir)$(OutputPath)</StartWorkingDirectory>
+  </PropertyGroup>
+  <Target Name="Test">
+    <Exec Command="$(StartProgram) /nologo /noshadow $(AssemblyName).dll" WorkingDirectory="$(StartWorkingDirectory)" />
+  </Target>
+</Project>
